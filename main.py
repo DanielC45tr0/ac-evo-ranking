@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-app = FastAPI(title="VRB Racing")
+app = FastAPI(title="VRB")
 
 @app.get("/", response_class=HTMLResponse)
 async def ranking_page():
@@ -86,9 +86,11 @@ async def ranking_page():
             <tr>
                 <th>Posição</th>
                 <th>Piloto</th>
-                <th>Pontos</th>
-                <th>Corridas</th>
                 <th>Categoria</th>
+                <th>Melhor Volta</th>
+                <th>Média Limpa</th>
+                 <th>Delta</th>
+                 <th>Voltas</th>
             </tr>
         </table>
 
